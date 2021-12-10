@@ -1,2 +1,2 @@
-# servant-persistent-resurrections
-An intricate example of Servant with Persistent
+# servant-persistent-starter
+A barebones template for Servant with Persistent.

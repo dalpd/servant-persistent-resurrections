@@ -1,0 +1,89 @@
+name: servant-persistent-starter
+version: 0.1.0.0
+synopsis: An intricate example of Servant with Persistent.
+maintainer: Deniz Alp Durmaz <denizalpd@ogr.iu.edu.tr>
+category: Web
+license: BSD3
+  
+ghc-options: -Wall -O2 -fspecialise-aggressively
+
+default-extensions:
+  - DataKinds
+  - DeriveAnyClass
+  - DerivingNewtype
+  - DerivingStrategies
+  - DerivingVia
+  - FlexibleContexts
+  - GADTs
+  - GeneralizedNewtypeDeriving
+  - InstanceSigs
+  - LambdaCase
+  - NoImplicitPrelude
+  - OverloadedStrings
+  - PolyKinds
+  - RankNTypes
+  - RecordWildCards
+  - ScopedTypeVariables
+  - TypeApplications
+  - TypeOperators
+  - TypeFamilies  
+
+extra-source-files:
+  - README.md
+
+library:
+  source-dirs:
+    - src
+  dependencies:
+    - aeson
+    - aeson-pretty
+    - bytestring
+    - containers
+    - dhall
+    - esqueleto
+    - hedgehog
+    - katip
+    - lens
+    - mtl
+    - openapi3
+    - persistent
+    - persistent-postgresql
+    - relude
+    - servant-server
+
+executables:
+  servant-persistent-starter-core:
+    main: Main.hs
+    source-dirs:
+      - app
+    dependencies:
+      - servant-persistent-starter
+
+tests:
+  servant-persistent-starter-test:
+    main: Main.hs
+    source-dirs: test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+      - aeson
+      - aeson-qq
+      - hspec
+      - hedgehog
+      - servant-persistent-starter
+      - tasty
+      - tasty-hedgehog
+
+benchmarks:
+  servant-persistent-starter-bench:
+    main: Main.hs
+    source-dirs: bench
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - criterion >= 1.1.0.0
+      - servant-persistent-starter
