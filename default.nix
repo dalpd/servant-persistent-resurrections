@@ -1,4 +1,4 @@
-{ compiler ? "ghc921" }:
+{ compiler ? "ghc901" }:
 
 let
   sources = import ./nix/sources.nix;
@@ -9,8 +9,15 @@ let
   baseHaskellPkgs = pkgs.haskell.packages.${compiler};
 
   myHaskellPackages = baseHaskellPkgs.override {
-    overrides = hself: hsuper: {
-      servant-persistent-starter = hself.callCabal2nix "servant-persistent-starter" (./.) { };
+    overrides = self: super: {
+      servant-persistent-starter = self.callCabal2nix "servant-persistent-starter" (./.) { };
+
+      relude = self.callCabal2nix "relude" sources.relude { };
+
+      optics-th = self.optics-th_0_4;
+      optics-extra = self.optics-extra_0_4;
+
+      openapi3 = dontCheck super.openapi3;
     };
   };
 

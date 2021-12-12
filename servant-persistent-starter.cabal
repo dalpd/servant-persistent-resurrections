@@ -1,0 +1,163 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.5.
+--
+-- see: https://github.com/sol/hpack
+
+name:           servant-persistent-starter
+version:        0.1.0.0
+synopsis:       A barebones template for Servant with Persistent.
+category:       Web
+maintainer:     Deniz Alp Durmaz <denizalpd@ogr.iu.edu.tr>
+license:        BSD3
+build-type:     Simple
+extra-source-files:
+    README.md
+
+library
+  exposed-modules:
+      SPS
+  other-modules:
+      Paths_servant_persistent_starter
+  hs-source-dirs:
+      src
+  default-extensions:
+      DataKinds
+      DeriveAnyClass
+      DerivingNewtype
+      DerivingStrategies
+      DerivingVia
+      FlexibleContexts
+      GADTs
+      GeneralizedNewtypeDeriving
+      InstanceSigs
+      LambdaCase
+      NoImplicitPrelude
+      OverloadedStrings
+      PolyKinds
+      RankNTypes
+      RecordWildCards
+      ScopedTypeVariables
+      TypeApplications
+      TypeOperators
+      TypeFamilies
+  ghc-options: -Wall -O2 -fspecialise-aggressively
+  build-depends:
+      aeson
+    , aeson-pretty
+    , bytestring
+    , containers
+    , dhall
+    , esqueleto
+    , hedgehog
+    , katip
+    , lens
+    , mtl
+    , openapi3
+    , persistent
+    , persistent-postgresql
+    , relude
+    , servant-server
+  default-language: Haskell2010
+
+executable servant-persistent-starter-core
+  main-is: Main.hs
+  other-modules:
+      Paths_servant_persistent_starter
+  hs-source-dirs:
+      app
+  default-extensions:
+      DataKinds
+      DeriveAnyClass
+      DerivingNewtype
+      DerivingStrategies
+      DerivingVia
+      FlexibleContexts
+      GADTs
+      GeneralizedNewtypeDeriving
+      InstanceSigs
+      LambdaCase
+      NoImplicitPrelude
+      OverloadedStrings
+      PolyKinds
+      RankNTypes
+      RecordWildCards
+      ScopedTypeVariables
+      TypeApplications
+      TypeOperators
+      TypeFamilies
+  ghc-options: -Wall -O2 -fspecialise-aggressively
+  build-depends:
+      servant-persistent-starter
+  default-language: Haskell2010
+
+test-suite servant-persistent-starter-test
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  other-modules:
+      Paths_servant_persistent_starter
+  hs-source-dirs:
+      test
+  default-extensions:
+      DataKinds
+      DeriveAnyClass
+      DerivingNewtype
+      DerivingStrategies
+      DerivingVia
+      FlexibleContexts
+      GADTs
+      GeneralizedNewtypeDeriving
+      InstanceSigs
+      LambdaCase
+      NoImplicitPrelude
+      OverloadedStrings
+      PolyKinds
+      RankNTypes
+      RecordWildCards
+      ScopedTypeVariables
+      TypeApplications
+      TypeOperators
+      TypeFamilies
+  ghc-options: -Wall -O2 -fspecialise-aggressively -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , aeson-qq
+    , hedgehog
+    , hspec
+    , servant-persistent-starter
+    , tasty
+    , tasty-hedgehog
+  default-language: Haskell2010
+
+benchmark servant-persistent-starter-bench
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  other-modules:
+      Paths_servant_persistent_starter
+  hs-source-dirs:
+      bench
+  default-extensions:
+      DataKinds
+      DeriveAnyClass
+      DerivingNewtype
+      DerivingStrategies
+      DerivingVia
+      FlexibleContexts
+      GADTs
+      GeneralizedNewtypeDeriving
+      InstanceSigs
+      LambdaCase
+      NoImplicitPrelude
+      OverloadedStrings
+      PolyKinds
+      RankNTypes
+      RecordWildCards
+      ScopedTypeVariables
+      TypeApplications
+      TypeOperators
+      TypeFamilies
+  ghc-options: -Wall -O2 -fspecialise-aggressively -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      criterion >=1.1.0.0
+    , servant-persistent-starter
+  default-language: Haskell2010

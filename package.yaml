@@ -1,6 +1,6 @@
 name: servant-persistent-starter
 version: 0.1.0.0
-synopsis: An intricate example of Servant with Persistent.
+synopsis: A barebones template for Servant with Persistent.
 maintainer: Deniz Alp Durmaz <denizalpd@ogr.iu.edu.tr>
 category: Web
 license: BSD3

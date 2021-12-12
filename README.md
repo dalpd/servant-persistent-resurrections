@@ -1,2 +1,2 @@
 # servant-persistent-starter
-A barebones template for Servant with Persistent.
+A template for Servant with Persistent.

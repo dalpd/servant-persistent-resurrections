@@ -12,15 +12,27 @@
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs": {
-        "branch": "nixpkgs-unstable",
+        "branch": "release-21.11",
         "description": "Nix Packages collection",
         "homepage": "",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "47f45c8440e2ef1e967aa5aec3528dd976c4a488",
-        "sha256": "07q76bq14scwqr1s9yp4c89gfgxh2nva85lrhnahbwk69lzas11p",
+        "rev": "7796065f51dd8a60fb58a524b8fa68699a6f57d3",
+        "sha256": "1sv4bri3vykx54bw9aaphzxcnsjb7wra2n9gyi5ky07fdk359j45",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs/archive/47f45c8440e2ef1e967aa5aec3528dd976c4a488.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs/archive/7796065f51dd8a60fb58a524b8fa68699a6f57d3.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "relude": {
+        "branch": "main",
+        "description": "🌀 Safe, performant, user-friendly and lightweight Haskell standard library",
+        "homepage": "https://kowainik.github.io/projects/relude",
+        "owner": "kowainik",
+        "repo": "relude",
+        "rev": "442a51ca272f588c54abe86ca7acb79e456109b5",
+        "sha256": "0vzka3rsapx7l1zxvc75wfzrpf4wnl6h0fxr0z5q21h1mmhd973p",
+        "type": "tarball",
+        "url": "https://github.com/kowainik/relude/archive/442a51ca272f588c54abe86ca7acb79e456109b5.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
